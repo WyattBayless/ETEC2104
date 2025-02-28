@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div.dialog {
+    
+    border: 2px double black;
+    background: white;
+    padding-top: 0em;
+    padding-left: 0em;
+    padding-right: 0em;
+    padding-bottom: 0em;
+
+    /* center the div vertically and horizontally
+       ref: https://stackoverflow.com/a/13356401 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    text-align:center;
+
+    /* set size of dialog */
+    width: 70vw;
+    height: 50vh;
+
+    overflow: auto;
+
+    /* offset x, offset y, blur radius, color*/
+    /*box-shadow: 1em 1em 0.5em rgba(0,0,0,0.5);*/
+
+    z-index: 10;
+}
+
+.bluePost{
+    font-weight: bold;
+    text-align: left;
+    border: 1px double black;
+    color: black;
+    background: lightskyblue;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding: 2em;
+}
+
+.greyPost{
+    font-weight: bold;
+    text-align: left;
+    border: 1px double black;
+    color: black;
+    background: lightgrey;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding: 2em;
+}
+
+.rightalign {
+    text-align: right;
+    margin-top: -1em;
+    margin-bottom: 0em;
+    padding: 0em;
+}
+
+.leftalign {
+    text-align: left;
+    margin-top: -2.5em;
+    margin-bottom: 0em;
+    margin-left: 5em;
+    padding: 0em;
+}
+
+top {
+    font-size: xx-large;
+    font-weight: bold;
+    position: relative;
+    left: 6em;
+    top: 5em;
+}
+
+img {
+    width: 64px;
+    height: 64px; 
+    padding: 0em;
+    margin-top: -1em;
+    margin-bottom: 0em;
+    margin-right: 0em;
+}
+
+</style>
+<body>
+<top>
+    Posts
+</top> 
+<div class="dialog">
+    <div class="bluePost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">1 day ago</div> 
+                <div class="rightalign">&#128065 5</div></div>
+    <div class="greyPost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">2 day ago</div>
+                <div class="rightalign">&#128065 7</div></div>
+    <div class="bluePost"><img src="/html/logo.png" class="img"/>
+                 <div class="leftalign">2 day ago</div>
+                <div class="rightalign">&#128065 8</div></div>
+    <div class="greyPost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">3 day ago</div>
+                <div class="rightalign">&#128065 10</div></div>
+    <div class="bluePost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">4 day ago</div>
+                <div class="rightalign">&#128065 11</div></div>
+    <div class="greyPost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">5 day ago</div>
+                <div class="rightalign">&#128065 13</div></div>
+    <div class="bluePost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">5 day ago</div>
+                <div class="rightalign">&#128065 13</div></div>
+    <div class="greyPost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">6 day ago</div>
+                <div class="rightalign">&#128065 14</div></div>
+    <div class="bluePost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">1 week ago</div>
+                <div class="rightalign">&#128065 16</div></div>
+    <div class="greyPost"><img src="/html/logo.png" class="img"/>
+                <div class="leftalign">1 week ago</div>
+                <div class="rightalign">&#128065 20</div></div>
+    
+</div>
+     
+</body>
+</html>

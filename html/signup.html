@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div.dialog {
+    
+    border: 2px double black;
+    background: white;
+    padding-top: 0em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+
+    /* center the div vertically and horizontally
+       ref: https://stackoverflow.com/a/13356401 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    text-align:center;
+
+    /* set size of dialog */
+    width: 40vw;
+    height: 40vh;
+
+    overflow: auto;
+
+    /* offset x, offset y, blur radius, color*/
+    box-shadow: 1em 1em 0.5em rgba(0,0,0,0.5);
+
+    z-index: 10;
+}
+
+div.button {
+    border: 3px outset ;
+    margin: 1em;
+    padding: 1em;
+    background: lightgrey;
+    text-align: center;
+}
+
+.topSpace {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+.emptyLine {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+}
+
+</style>
+<body>
+<div class="dialog">
+    <div class="topSpace">Signup Page</div>
+    <div>Email: <input size = 15> </div>
+    <div class="emptyLine"></div>
+    <div>Real name: <input size = 15> </div>
+    <div class="emptyLine"></div>
+    <div>Password: <input type = "password" size = 15> </div>
+    <div class="emptyLine"></div>
+    <div>Date of Birth: <input type = "date" size = 15> </div>
+    <div class="emptyLine"></div>
+    <div class="button" <button onclick="location.href = 'html/test.html'">Sign Up</button>
+</div>
+     
+</body>
+</html>
