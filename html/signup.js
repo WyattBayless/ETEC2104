@@ -1,3 +1,4 @@
+"use strict";
 
 function clicked(){
     let emailInput = document.getElementById("email_address");
