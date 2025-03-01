@@ -1,0 +1,11 @@
+% if theme == "dark" :
+    body {
+        background: #202020;
+        color: #cccccc;
+    }
+% else:
+    body {
+        background: white;
+        color: black;
+    }
+% endif

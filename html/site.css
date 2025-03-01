@@ -1,0 +1,10 @@
+div.header {
+    background: grey;
+    border: 1px solid black;
+    color: blue;
+}
+
+div.footer {
+    font-size: 50%;
+    color: grey;
+}
