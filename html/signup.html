@@ -60,15 +60,16 @@ div.button {
 <body>
 <div class="dialog">
     <div class="topSpace">Signup Page</div>
-    <div>Email: <input size = 15> </div>
+    <div>Email: <input size = 15 id = "email_address"> </div>
     <div class="emptyLine"></div>
-    <div>Real name: <input size = 15> </div>
+    <div>Real name: <input size = 15 id = "real_name"> </div>
     <div class="emptyLine"></div>
-    <div>Password: <input type = "password" size = 15> </div>
+    <div>Password: <input type = "password" size = 15 id = "pword_entry"> </div>
     <div class="emptyLine"></div>
-    <div>Date of Birth: <input type = "date" size = 15> </div>
+    <div>Date of Birth: <input type = "date" size = 15 id = "dob"> </div>
     <div class="emptyLine"></div>
-    <div class="button" <button onclick="location.href = 'html/test.html'">Sign Up</button>
+    <div class="button" <button onclick="clicked()">Sign Up</button>
+    <script src="/html/signup.js"></script>
 </div>
      
 </body>
