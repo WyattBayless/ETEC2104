@@ -29,7 +29,7 @@ div.dialog {
     overflow: auto;
 
     /* offset x, offset y, blur radius, color*/
-    box-shadow: 1em 1em 0.5em rgba(0,0,0,0.5);
+    /*box-shadow: 1em 1em 0.5em rgba(0,0,0,0.5);*/
 
     z-index: 10;
 }
@@ -40,6 +40,31 @@ div.button {
     padding: 1em;
     background: lightgrey;
     text-align: center;
+}
+
+.alert {
+    position: fixed;
+    left:0;
+    top: 10%;
+    background: #ffcccc;
+    text-align: center;
+    font-size: x-large;
+    width: 100%;
+    padding: 1em;
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+}
+.welcome {
+    position: fixed;
+    left:0;
+    top: 10%;
+    background: #ccccff;
+    text-align: center;
+    font-size: x-large;
+    width: 100%;
+    padding: 1em;
+    border-top: 3px solid blue;
+    border-bottom: 3px solid blue;
 }
 
 .topSpace {
