@@ -11,6 +11,7 @@ import page_index
 import page_signup
 import page_posts
 import page_test
+import page_home
 
 lookup = mako.lookup.TemplateLookup(
     directories=[
@@ -29,6 +30,8 @@ images = ["banana.png","dino.png","fish.png",
           "monkey.png","pizza.png","robot.png",
           "steak.png"]
 
+BASEDIR=os.path.abspath( os.path.dirname(__file__))
+
 class App:
     @cherrypy.expose
     def quote(self):
@@ -40,9 +43,7 @@ class App:
         #themeName = getThemeForUser()
         #t = lookup.get_template("home.html")
         #return t.render(theme=themeName)
-        n = random.choice(names)
-        t = lookup.get_template("home.html")
-        return t.render(NAME=n)
+        return page_home.get()
     @cherrypy.expose
     def signup(self):
         return page_signup.get()
@@ -69,8 +70,37 @@ class App:
     @cherrypy.expose
     def test(self):
         return page_test.get()
-        
-#the location where the main.py file is stored: The src folder
+    
+    @cherrypy.expose
+    def updateprofile(self):
+        with open(f"{BASEDIR}/../html/updateprofile.html") as fp:
+            return fp.read()
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def do_update(self, name, birthday, pic ):
+        print("name is:",name)
+        print("birthday is:",birthday)
+        print("pic is:",pic)
+        tmp = pic.file.read()
+        #just print first 10 bytes
+        print("pic is:",tmp[:10])
+        return {"ok": True }
+    
+    @cherrypy.expose
+    def makepost(self):
+        with open(f"{BASEDIR}/../html/makepost.html") as fp:
+            return fp.read()
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def update_post(self,pic,title):
+        print("pic is:",pic)
+        print("title is:",title)
+        tmp = pic.file.read()
+        #just print first 10 bytes
+        print("pic is:",tmp[:10])
+        return {"ok": True }
 
 app = App()
 cherrypy.quickstart(app,'/',

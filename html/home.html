@@ -12,8 +12,36 @@
     padding: 0.5em;
 }
 
+.image {
+    position: fixed;
+    left: 100px;
+    top: 75px;
+    padding: 0em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+.postText {
+    position: fixed;
+    left: 130px;
+    top: 300px;
+    font-size: xx-large;
+    padding: 0em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-right: 0em;
+    color: black;
+}
+
 </style>
-<body>
+<body onload="updatePost()" onunload="updateStorage()">
     <div class="title">Hello, ${NAME}</div>
+    <div class="image">
+    <img id="postimg" width = "200" height = "200" src = "html/assets/question mark.png"/>
+    </div>
+    <div class="postText" id="title"> </div>
+    <script src="/html/makepost.js"></script>
 </body>
 </html>
